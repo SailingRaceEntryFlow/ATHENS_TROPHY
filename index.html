@@ -428,7 +428,7 @@
 
       <div class="separator"></div>
 
-    <div class="section-title">ATHENS TROPHY COASTAL</div>
+  <div class="section-title" id="eventTitle"></div>
 
       <div class="notice-box">
         <div class="line1">Η ΑΝΑΖΗΤΗΣΗ ΓΙΝΕΤΑΙ ΜΟΝΟ ΜΕ ΤΟΝ ΑΡΙΘΜΟ ΙΣΤΙΟΥ.</div>
@@ -474,6 +474,7 @@
 
     const EVENT_LOGO = "https://github.com/jsamartzis-png/logos/blob/main/logo_EntryFlow_removebg-preview.png?raw=true";
     const EVENT_BACKGROUND = "background.jpg";
+    const EVENT_TITLE = "ATHENS TROPHY COASTAL";
 
     const EVENT_NOTES = [
   "Με τη χρήση αυτής της εφαρμογής, μπορείτε εύκολα να υποβάλετε τα απαραίτητα έγγραφα και να ολοκληρώσετε την πληρωμή του παραβόλου (όλα σε ένα σημείο).",
@@ -531,9 +532,10 @@
     function setupHero() {
       document.getElementById("eventLogo").src = EVENT_LOGO;
       document.getElementById("heroBg").style.backgroundImage = "url('" + EVENT_BACKGROUND + "')";
+      document.getElementById("eventTitle").textContent = EVENT_TITLE;
       document.getElementById("noticeYearText").textContent = NOTICE_YEAR_TEXT;
       document.getElementById("noticeInfoText").textContent = NOTICE_INFO_TEXT;
-
+      
       const notesList = document.getElementById("eventNotes");
       notesList.innerHTML = "";
 
